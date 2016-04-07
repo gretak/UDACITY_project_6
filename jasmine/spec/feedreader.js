@@ -103,6 +103,7 @@ describe('The menu', function() {
 
          describe('New Feed Selection', function(){
             var entries = $('.feed a').children('entry');;
+
             beforeEach(function(done){
                 loadFeed(2, done);
             });
@@ -111,9 +112,9 @@ describe('The menu', function() {
                 expect($('.feed a').children('.entry')).not.toBe(entries);
                 done();
             });
-            afterAll(function(done){
-                loadFeed(0,done);
-            });
+             afterAll(function(done){
+                 loadFeed(0,done);
+             });
 
         });
 
